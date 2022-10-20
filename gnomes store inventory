@@ -1,0 +1,25 @@
+--create a databased named GNOMES
+
+CREATE TABLE gnomes (id INTEGER PRIMARY KEY, name TEXT, color TEXT, size TEXT, price INTEGER);
+
+INSERT INTO gnomes VALUES (1, "Angry", "red", "3 inches", 5);
+INSERT INTO gnomes VALUES (2, "Harvest", "orange", "2 inches", 4);
+INSERT INTO gnomes VALUES (3, "Sunny", "yellow", "2 inches", 4);
+INSERT INTO gnomes VALUES (4, "Grazz", "green", "3 inches", 5);
+INSERT INTO gnomes VALUES (5, "Sky", "blue", "2 inches", 4);
+INSERT INTO gnomes VALUES (6, "Plum", "purple", "3 inches", 5);
+INSERT INTO gnomes VALUES (7, "Snort", "pink", "2 inches", 4);
+INSERT INTO gnomes VALUES (8, "New Years", "silver", "4 inches", 6);
+INSERT INTO gnomes VALUES (9, "Valentines", "red", "4 inches", 6);
+INSERT INTO gnomes VALUES (10, "Saint Patties", "green", "4 inches", 6);
+INSERT INTO gnomes VALUES (11, "Bunnz", "white", "4 inches", 6);
+INSERT INTO gnomes VALUES (12, "Mems", "multi", "4 inches", 6);
+INSERT INTO gnomes VALUES (13, "Independence", "red white and blue", "4 inches", 6);
+INSERT INTO gnomes VALUES (14, "Halloweenie", "black and orange", "4 inches", 6);
+INSERT INTO gnomes VALUES (15, "Xmas", "green and red", "4 inches", 6);
+
+--display the database ordered by price
+SELECT name, color, price FROM gnomes ORDER BY price
+
+--what is the average price of the gnomes?
+SELECT avg(price) "avg price" FROM gnomes
